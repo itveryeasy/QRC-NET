@@ -32,4 +32,5 @@ if __name__ == "__main__":
 
     # Run QRC model for feature extraction and evaluation
     recall = run_qrc_model('dataset/german.data-numeric')
+
     print(f"Recall Score: {recall}")
