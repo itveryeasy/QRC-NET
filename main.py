@@ -25,5 +25,5 @@ if __name__ == "__main__":
     visualize_quantum_circuit(qc)
 
     # Run the QRC model
-    recall = run_qrc_model()
+    recall = run_qrc_model('dataset/german.data-numeric')
     print(f"Recall Score: {recall}")
