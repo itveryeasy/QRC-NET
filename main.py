@@ -4,9 +4,6 @@ from scripts.qrc_model import run_qrc_model
 
 # Build Quantum Circuit
 def build_quantum_circuit(n_qubits, depth):
-    """
-    Build a parameterized quantum circuit for QRC.
-    """
     qc = QuantumCircuit(n_qubits)
     for _ in range(depth):
         for qubit in range(n_qubits):
@@ -18,9 +15,6 @@ def build_quantum_circuit(n_qubits, depth):
 
 # Visualize Quantum Circuit
 def visualize_quantum_circuit(qc):
-    """
-    Draw the quantum circuit using Matplotlib.
-    """
     qc.draw('mpl')
 
 if __name__ == "__main__":
@@ -30,7 +24,6 @@ if __name__ == "__main__":
     qc = build_quantum_circuit(n_qubits, depth)
     visualize_quantum_circuit(qc)
 
-    # Run QRC model for feature extraction and evaluation
-    recall = run_qrc_model('dataset/german.data-numeric')
-
+    # Run the QRC model
+    recall = run_qrc_model()
     print(f"Recall Score: {recall}")
